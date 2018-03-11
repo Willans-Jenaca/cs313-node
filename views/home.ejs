@@ -1,29 +1,25 @@
 <!doctype html>
 <html>
   <head>
-    <title>Week 09: Team Assignment</title>
+    <title>Week 09: Prove</title>
     <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
   </head>
   <body class="container-fluid pt-3">
-    <h1>Math</h1>
+    <h1>Postal Rate Calculator</h1>
     <form method="get" action="/math" class="mb-5">
       <div class="row">
       <div class="form-group col-sm-3">
-        <label for="op1">First operand:</label>
-        <input type="number" id="op1" step="0.01" class="form-control" placeholder="#" name="op1" />
+        <label for="op1">Mail Weight in Ounces (Must be less than 13oz):</label>
+        <input type="number" id="op1" step="0.01" max="13" class="form-control" placeholder="#oz" name="op1" />
       </div>
       <div class="form-group col-sm-3">
-        <label for="operator">Operator</label>
+        <label for="operator">Mail Class (Subject to change based on weight):</label>
         <select id="operator" class="form-control" name="operator">
-          <option value="add">+</option>
-          <option value="sub">-</option>
-          <option value="mul">x</option>
-          <option value="div">/</option>
+          <option value="stamped">Stamped Letters</option>
+          <option value="metered">Metered Letters</option>
+          <option value="envelope">Large Envelopes (Flats)</option>
+          <option value="retail">First-Class Package Service - Retail</option>
         </select>
-      </div>
-      <div class="form-group col-sm-3">
-        <label for="op2">Second Operand:</label>
-        <input type="number" id="op2" step="0.01" class="form-control" placeholder="#" name="op2" />
       </div>
     </div>
     <div class="row">
