@@ -17,6 +17,7 @@ async function calc() {
   );
 }
 
+// source: http://jsfiddle.net/9TP3e/
 $('#op1').on('keydown keyup', function(e){
     if ($(this).val() > 13 
         && e.keyCode != 46 // delete
