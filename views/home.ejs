@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Week 09: Team Assignment</title>
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
+  </head>
+  <body class="container-fluid pt-3">
+    <h1>Math</h1>
+    <form method="get" action="/math" class="mb-5">
+      <div class="row">
+      <div class="form-group col-sm-3">
+        <label for="op1">First operand:</label>
+        <input type="number" id="op1" step="0.01" class="form-control" placeholder="#" name="op1" />
+      </div>
+      <div class="form-group col-sm-3">
+        <label for="operator">Operator</label>
+        <select id="operator" class="form-control" name="operator">
+          <option value="add">+</option>
+          <option value="sub">-</option>
+          <option value="mul">x</option>
+          <option value="div">/</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-3">
+        <label for="op2">Second Operand:</label>
+        <input type="number" id="op2" step="0.01" class="form-control" placeholder="#" name="op2" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <button type="submit" class="btn btn-outline-primary" id="btnSubmit">Go!</button>
+        <button type="button" class="btn btn-outline-secondary" id="btnAjax">Go AJAX!</button>
+      </div>
+    </div>
+    </form>
+    <span id="spnResult"></span>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+   <script src="script.js"></script>
+  </body>
+</html>

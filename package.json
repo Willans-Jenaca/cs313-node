@@ -29,5 +29,6 @@
     "heroku",
     "express"
   ],
+  "author": "Jenaca Willans and node-js-getting-started",
   "license": "MIT"
 }
