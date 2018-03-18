@@ -1,10 +1,13 @@
 var cool = require('cool-ascii-faces');
 const express = require('express');
+const bodyParser = require('body-parser'); 
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //source for Twitter: https://www.npmjs.com/package/twitter
 //source for callbacks: https://www.youtube.com/watch?v=dFUkv4IA62Q
 var Twitter = require('twitter');
+//var userList = require('./user-list');
  
 var client = new Twitter({
   consumer_key: 'r4r2v71tY2QgTY0viRrsirqNL',
@@ -54,7 +57,7 @@ client.get('users/lookup', {user_id: follower_data_string}, function(error, user
   //console.log(users_results);
   users_results.forEach(function(user){
     var userObject = {
-      user_id: user.id.
+      user_id: user.id,
       name: user.name,
       screen_name: user.screen_name      
     };
@@ -63,7 +66,15 @@ client.get('users/lookup', {user_id: follower_data_string}, function(error, user
   });
 
   console.log(users_to_display);
+
   });
+});
+
+app.post('/get_users', function(request, response) {
+  var screen_name = request.body.handle;
+  
+  console.log(screen_name);
+  //var users = userList(screen_name); 
 });
 
 
@@ -149,7 +160,6 @@ app.get('/math_service/:op/:op1', (req, res) => {
   });
 });
 
-var classChanged = "";
 
 function stamped(op1) {
   if (op1 <= 1) {

@@ -33,11 +33,10 @@
       <!-- <div class="column"> -->
         <div class='f2lcontactsidebarcontent'>
           <h3>Twitter Feed:</h3>
-          <!-- <ul>
-              <% results.forEach(function(r) { %>
-                  <li><%= r.id %> - <%= r.lastname %></li>
-              <% }); %>
-          </ul> -->
+              <form method="POST" action="get_users">
+                <input type="text" id="handle" placeholder="Enter Name" name="handle" />
+                <input type="submit" value="Get Users" />
+              </form>
         </div>
       <!-- </div> -->
       <!-- <div class="column"> -->
