@@ -1,39 +1,76 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Week 10: Prove</title>
-    <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <title>Freedom To Learn | Home</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Jenaca Willans">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Freedom To Learn Book 
+              by Art Willans and Cari Williams">
+        <!-- <link href="../css_stylesheets/f2l_css.css" rel="stylesheet" 
+              media="screen" type="text/css"/> -->
+        <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
   </head>
   <body class="container-fluid pt-3">
-    <h1>Freedom to Learn</h1>
-    <form method="get" action="/math" class="mb-5">
-      <div class="row">
-      <div class="form-group col-sm-3">
-        <label for="op1">Mail Weight in Ounces (Must be less than 13oz):</label>
-        <input type="number" id="op1" step="0.01" max="13" class="form-control" placeholder="#oz" name="op1" />
+    <header class="headernav">
+      <nav class="logonav">
+        <div class="logodiv">
+        <a href="home.ejs">
+            <img src="../images/F2L Logo.png" 
+            alt="Freedom to Learn Logo"
+            width="518" height="108" class="logo"></a>
+        <h1 class="hide">Freedom to Learn Book</h1>
+        </div>  <!---- class logodiv ---->
+        <div class="fullnav">
+          <ul>
+            <li><a href="../index.php">Home</a></li>
+        </div> <!--- full screen nav div ---->
+    </header> <!--- class headernav ----> 
+    <h2>Creating a Classroom Where Every Child Thrives</h2>
+      <div class="column">
+        <div class='f2lcontactsidebarcontent'>
+          <h3>Contact the Authors:</h3><br>
+                        <h3>By Email: </h3><br>
+                        <p>Art Willans </p>
+                        <p><a href="mailto:Art@freedomtolearnbook.com?Subject=Contact%20Form" 
+                               target="_top">Art@freedomtolearnbook.com</a></p><br>
+                        <h3>By Telephone: </h3><br>
+                        <p>Art Willans</p>
+                        <p>(775) 750-4223</p><br>
+                        <h3>Find us on Facebook: </h3><br>
+                        <p><a href="https://www.facebook.com/cari.williams.3958" 
+                   target="_blank">Freedom to Learn</a></p>
+        </div>
       </div>
-      <div class="form-group col-sm-3">
-        <label for="operator">Mail Class (Subject to change based on weight):</label>
-        <select id="operator" class="form-control" name="operator">
-          <option value="stamped">Stamped Letters</option>
-          <option value="metered">Metered Letters</option>
-          <option value="envelope">Large Envelopes (Flats)</option>
-          <option value="retail">First-Class Package Service - Retail</option>
-        </select>
+      <div class="column">
+        <div class="f2l1cover"> 
+          <img src="../images/Willans-Williams_Freedom-to-Learn_original.jpg" 
+                        alt="Freedom to Learn bookcover" width='100%'/>
+        </div> <!--- class f2l1 ---->
       </div>
+    <div class="column">
+      <div class="f2lsidebar">
+          <h1>Freedom to Learn</h1>
+              <h3>Now available for pre-order from </h3>
+                <a href="https://www.newsociety.com/Books/F/Freedom-to-Learn"
+                            target="_blank">
+                <img src="../images/logo_nsp.png" alt="New Society Logo"/></a>
+                        <div class="nowrap">
+                        <a href="https://www.newsociety.com/Books/F/Freedom-to-Learn" 
+                           target="_blank">Pre-order here for a 20% discount!</a>
+                            </div> <!--- class: nowrap-->
+                        <br>
+                      <h3></h3>
+                        <p>Counselor</p>                      
+      </div> <!--- class f2lsidebar ---->
     </div>
-    <div class="row">
-      <div class="col-sm">
-        <button type="submit" class="btn btn-outline-primary" id="btnSubmit">Go!</button>
-        <button type="button" class="btn btn-outline-secondary" id="btnAjax">Go AJAX!</button>
-      </div>
-    </div>
-    </form>
-    <span id="spnResult"></span>
+    <footer> 
+            &copy; 2017 | Dr. Art Willans and Cari Williams | New Society Publishing
+    </footer>
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
    <script src="script.js"></script>
   </body>
-</html>
+</html>     
