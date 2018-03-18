@@ -2,6 +2,23 @@ var cool = require('cool-ascii-faces');
 const express = require('express');
 const app = express();
 
+//source: https://www.npmjs.com/package/twitter
+var Twitter = require('twitter');
+ 
+var client = new Twitter({
+  consumer_key: 'r4r2v71tY2QgTY0viRrsirqNL',
+  consumer_secret: 'bCgy3aZWvlxEZGnwVU1oc3VmPH54d3qXbFHzxOTA5tWezM26x1',
+  access_token_key: '860761615632814081-Tnehd3GYLeog8FFGoAEac3fTkTZ7wEN',
+  access_token_secret: 'ohFSDsvskwuV7uWK3sIFOYwl5lNwig2LaQ8xyoihMK2d5'
+});
+ 
+var tweetParams = {screen_name: 'freedom2learnbk'};
+client.get('statuses/user_timeline', tweetParams, function(error, tweets, response) {
+  if (!error) {
+    console.log(tweets);
+  }
+});
+
 var pg = require('pg');
 const connectionString = process.env.DATABASE_URL || "postgres://testuser:testuser@localhost:5432/Jenaca";
 
