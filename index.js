@@ -2,7 +2,8 @@ var cool = require('cool-ascii-faces');
 const express = require('express');
 const app = express();
 
-//source: https://www.npmjs.com/package/twitter
+//source for Twitter: https://www.npmjs.com/package/twitter
+//source for callbacks: https://www.youtube.com/watch?v=dFUkv4IA62Q
 var Twitter = require('twitter');
  
 var client = new Twitter({
@@ -14,10 +15,57 @@ var client = new Twitter({
  
 var tweetParams = {screen_name: 'freedom2learnbk'};
 client.get('statuses/user_timeline', tweetParams, function(error, tweets, response) {
-  if (!error) {
-    console.log(tweets);
+  if (error) {
+    throw error;
   }
+
+  var timeline = tweets;
+
+  //console.log(timeline);
+
+  //console.log(tweets);
 });
+
+client.get('followers/ids', tweetParams, function(error, follower_ids, response) {
+  if (error) {
+    throw error;
+  }
+
+var followers = follower_ids.ids;
+ console.log(followers.length);
+ console.log(followers);
+ // console.log(follower_ids.followers_count);
+
+ var follower_data = [];
+ var users_to_display = [];
+
+// loop through followers
+followers.forEach(function(person) {
+    follower_data.push(person);
+});
+
+//Twitter has a limit of 100 users
+follower_data = follower_data.slice(0, 99);
+
+//turn array of followers into a string
+var follower_data_string = follower_data.join();
+
+client.get('users/lookup', {user_id: follower_data_string}, function(error, users_results, response) {
+  //console.log(users_results);
+  users_results.forEach(function(user){
+    var userObject = {
+      user_id: user.id.
+      name: user.name,
+      screen_name: user.screen_name      
+    };
+
+    users_to_display.push(userObject);
+  });
+
+  console.log(users_to_display);
+  });
+});
+
 
 var pg = require('pg');
 const connectionString = process.env.DATABASE_URL || "postgres://testuser:testuser@localhost:5432/Jenaca";
