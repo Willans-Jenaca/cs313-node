@@ -7,15 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Freedom To Learn Book 
               by Art Willans and Cari Williams">
-        <!-- <link href="../css_stylesheets/f2l_css.css" rel="stylesheet" 
-              media="screen" type="text/css"/> -->
-        <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
+        <!-- <link rel="stylesheet" href="bootstrap.min.css" type="text/css" /> -->
+        <link href="../stylesheets/f2l_css.css" rel="stylesheet" 
+              media="screen" type="text/css"/>
   </head>
   <body class="container-fluid pt-3">
+  	<div class="wrapper">
     <header class="headernav">
       <nav class="logonav">
         <div class="logodiv">
-        <a href="home.ejs">
+        <a href="../">
             <img src="../images/F2L Logo.png" 
             alt="Freedom to Learn Logo"
             width="518" height="108" class="logo"></a>
@@ -23,32 +24,24 @@
         </div>  <!---- class logodiv ---->
         <div class="fullnav">
           <ul>
-            <li><a href="../index.php">Home</a></li>
+            <li><a href="../">Home</a></li>
         </div> <!--- full screen nav div ---->
     </header> <!--- class headernav ----> 
+    <section id="main">
     <h2>Creating a Classroom Where Every Child Thrives</h2>
-      <div class="column">
+    <div id="f2lcontent">
+      <!-- <div class="column"> -->
         <div class='f2lcontactsidebarcontent'>
-          <h3>Contact the Authors:</h3><br>
-                        <h3>By Email: </h3><br>
-                        <p>Art Willans </p>
-                        <p><a href="mailto:Art@freedomtolearnbook.com?Subject=Contact%20Form" 
-                               target="_top">Art@freedomtolearnbook.com</a></p><br>
-                        <h3>By Telephone: </h3><br>
-                        <p>Art Willans</p>
-                        <p>(775) 750-4223</p><br>
-                        <h3>Find us on Facebook: </h3><br>
-                        <p><a href="https://www.facebook.com/cari.williams.3958" 
-                   target="_blank">Freedom to Learn</a></p>
+          
         </div>
-      </div>
-      <div class="column">
+      <!-- </div> -->
+      <!-- <div class="column"> -->
         <div class="f2l1cover"> 
           <img src="../images/Willans-Williams_Freedom-to-Learn_original.jpg" 
                         alt="Freedom to Learn bookcover" width='100%'/>
         </div> <!--- class f2l1 ---->
-      </div>
-    <div class="column">
+      <!-- </div> -->
+    <!-- <div class="column"> -->
       <div class="f2lsidebar">
           <h1>Freedom to Learn</h1>
               <h3>Now available for pre-order from </h3>
@@ -60,10 +53,17 @@
                            target="_blank">Pre-order here for a 20% discount!</a>
                             </div> <!--- class: nowrap-->
                         <br>
-                      <h3></h3>
-                        <p>Counselor</p>                      
+                      <h3>Contact the Authors:</h3><br>
+                        <p>Email Art Willans: </p><br>
+                        <p><a href="mailto:Art@freedomtolearnbook.com?Subject=Contact%20Form" 
+                               target="_top">Art@freedomtolearnbook.com</a></p><br>
+                        <p>Find us on Facebook: </p><br>
+                        <p><a href="https://www.facebook.com/freedomtolearnbook" 
+                   target="_blank">Freedom to Learn</a></p>                      
       </div> <!--- class f2lsidebar ---->
-    </div>
+    <!-- </div> -->
+    </div> <!--- f2lcontent ---->
+    </section> <!--- main ---->
     <footer> 
             &copy; 2017 | Dr. Art Willans and Cari Williams | New Society Publishing
     </footer>
@@ -72,5 +72,6 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
    <script src="script.js"></script>
+   </div> <!--- wrapper ---->
   </body>
 </html>     

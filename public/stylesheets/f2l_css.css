@@ -1,0 +1,660 @@
+html * { 
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%; 
+    -moz-box-sizing: border-box;
+    font-family: VAG Rounded, sans-serif;
+    margin: 0 auto;
+    text-align: left;
+    color: #064780;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: VAG Rounded, sans-serif;
+    background-color: #070050;
+}
+
+.wrapper {
+    background: rgba(191, 210, 228, 1); 
+}
+
+h2 {
+    color: #B12331;
+} 
+
+#main {
+    padding: 3em;
+}
+    
+.hide {
+    display: none;
+    font-size: 1px;
+    margin: 0em;
+    padding: 0em;
+}
+
+/* hide phone nav section on full screen */
+.phonenav {
+    display: none;
+    font-size: 1px;
+    margin: 0em;
+    padding: 0em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #070050;
+    align-items: center;
+}
+
+nav div:first-child img {
+    height: 90px;  
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li {
+    border-bottom: none;
+    flex: auto;
+}
+
+nav ul li a {
+    color: #DFB56B;
+    text-decoration: none;
+    margin: 0;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+}
+
+.logodiv {
+    padding: 0;
+    margin-left: .8rem;
+    margin-right: 1rem;
+    background: #070050;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid #B12331; 
+    /*border-bottom: 1px solid #3786a3;*/
+}
+
+/* nav drop-down*/
+
+/*color of text for nav with dropdown*/
+nav span {
+    color: #DFB56B;
+}
+
+/* DropDown Arrow */
+nav span:after {        
+    border: 0.313em solid transparent; 
+    border-bottom: none;  
+    border-top-color: #B12331;  
+    content: ''; /* content of the arrow, keep this empty */
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    margin-left: .5em;
+}
+
+/*hide drop down options until hover*/
+nav ul ul {
+    display: none;
+    font-size: 0px;
+    margin: 0em;
+    padding: 0em;
+}
+
+/*display drop down options after hover*/
+nav ul li:hover > ul {
+    margin-top: 21em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+nav ul:after {
+    content:""; 
+    clear: both; 
+}
+
+nav ul ul {
+    background: #070050; 
+    padding: 20px 0px 10px 0px; 
+    position: absolute; /*taking this away expands the height of the top nav*/
+    flex-direction: column; /*keep - this takes it from 1 row to 2*/
+    white-space: nowrap; /*keeps words in the link together*/
+}
+
+nav ul ul li {
+    border-bottom: 1px solid #B12331; 
+    /*border-bottom: 1px solid #3786a3;*/
+    position: relative;
+    flex-direction: column; /*keep - aligns left*/
+    display: flex; /*keep - aligns left*/
+    margin: 2em;
+}
+
+/*words on the drop down*/
+nav ul ul li a {
+    padding: 3px 20px;
+}
+
+/*end of nav dropdown*/
+
+.f2lsidebar {
+    border-radius: 25px;
+    background: #0175B2;
+    padding: 1.5em;
+}
+
+.f2lsidebar p {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.f2lsidebar > ul {
+    padding: 0em 0em 0em 2em;
+}
+
+.f2lsidebar > ul > li {
+    padding: 0em 0em 0em 0.5em;
+    margin: 0;
+    list-style-type: square;
+}
+
+/* contact sidebar for home page */
+.f2lcontactsidebarcontent {
+    border-radius: 25px;
+    background: white;
+    padding: 1.5em;
+    margin-right: 2em;
+}
+
+/* contact sidebar for contact page */
+.f2lsidebarcontact {
+    border-radius: 25px;
+    background: white;
+    padding: 1.5em;
+    margin-right: 2em;
+}
+
+.f2l2 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.f2lcolumn {
+    padding-top: 1em;
+}
+
+.f2lcolumn p {
+    padding-right: 40px;
+}
+
+footer {
+    background-color: #DFB56B;
+    display: flex;
+    height: 4em;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+/* Desktops and laptops wide screen ***/
+@media all and (min-width : 1340px)
+{
+    .f2l1cover {
+        display: flex;
+        align-items: center;
+    }
+    
+    .f2l1cover img {
+        max-width: 500px;
+    }
+}
+
+/* Desktops and laptops ***/
+@media all and (min-width : 1025px) and (max-width : 1240px)
+{
+    .f2lcolumn {
+        flex: 1;
+        padding-right: 2em;
+    }
+    
+    .f2l1cover img {
+        min-width: 40vw;
+    }
+}
+
+/* Desktops and laptops ***/
+@media all and (min-width : 1025px)
+{
+    
+    h2 {
+        padding-bottom: 1.5em;
+    }
+
+    p {
+        padding: .5em;
+    }
+
+    .content {
+        display: flex;
+    }
+
+    #f2lcontent {
+        display: flex;
+    }
+
+    .f2l1 {
+        flex: 2;
+        padding: 0em 1em 0em 0em;
+    }
+    
+    .f2l1cover {
+        flex: 2;
+        padding: 0em 1em 0em 0em;
+    }
+    
+    .f2lsidebar {
+        flex: 1;
+    }
+
+    .f2lsidebar * {
+        padding: 0em 0em 1em 1em;
+    }
+
+    .f2limages {
+        display: flex;
+        overflow: auto;
+    }
+
+    .f2lcolumn {
+        flex: 1;
+        padding-right: 2em;
+    }
+
+    .f2lcolumn img {
+        padding: 2em 0em 0em 0em;
+    }
+    
+}
+
+/*** iPads (portrait and landscape) ***/
+@media all and (min-width : 601px) and (max-width : 1024px) 
+{
+    .logonav ul {
+        flex-wrap: wrap;
+    }
+
+    .logonav li {
+        flex: 1 1 50%;
+        padding-top: .5em;
+    }
+    
+    .logonav > ul > li > a {
+        font-size: 1.3em;
+        padding: .5em;
+    }
+    
+    .logonav ul li a {
+        padding-bottom: 0em;
+    }
+    
+    /*display drop down options after hover*/
+    nav ul li:hover > ul {
+        display: block;
+        margin-top: 1px;
+    }
+
+    h2 {
+        padding-bottom: 1.5em;
+    }
+
+    p {
+        padding: .5em;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .logodiv img {
+        max-width: 50vw;
+        max-height: 5em;
+    }
+
+    .f2lcontent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .f2l1 {
+        flex: 2;
+        order: 0;
+    }
+    
+    .f2l1cover {
+        flex: 1;
+        order: 0;
+    }
+
+    .f2l1cover img {
+        padding: 2em 0em 0em 0em;
+        max-width: 500px;
+    }
+    
+    .f2l2 {
+        order: 3;
+        padding-top: 2em;
+    }
+    
+    .f2lsidebar {
+        flex: 1;
+        order: 1;
+    }
+
+    .f2lsidebar * {
+        padding: 0em 0em 1em 1em;
+    }
+    
+    /* contact sidebar for home page */
+    .f2lcontactsidebarcontent {
+        background: white;
+        padding: 1em;
+        margin: 1em;
+        width: 90%;
+/*        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;*/
+    }
+    
+    .f2lcolumn {
+        flex: 1;
+        padding-right: 2em;
+    }
+
+    .f2limages {
+        display: flex;
+    }
+
+    .f2lcolumn img {
+        padding: 2em 0em 0em 0em;
+    }
+
+    footer {
+        height: 6em;
+    }
+}
+
+/*** Smartphones (portrait and landscape) ***/
+@media all and (max-width : 600px) 
+{ 
+    #main {
+        margin: 0 auto;
+        padding: 0em;
+    }
+    
+    /* hide full nav div on smartphones */
+    .fullnav {
+        display: none;
+        font-size: 1px;
+        margin: 0em;
+        padding: 0em;
+    }
+    
+    /* display hide div on smartphones */
+    .phonenav {
+        display: flex;
+        font-size: 12px;
+        margin: 1em;
+        padding: 1em;
+    }
+    
+    /* next two updated */
+    .logonav > div > ul > li > a {
+        align-items: flex-start;
+        display: flex;
+        font-size: 1.3em;
+        font-weight: 200;
+        letter-spacing: 1px;
+        padding: 0em 0em;
+        text-decoration: none;
+        text-shadow: 0em 0em 0em rgba(0,0,0,.1);
+        transition: all linear 0.1s;
+    }
+
+    .logonav li {
+        flex-basis: 100%;
+    }
+
+/*    .logonav > ul > li > a {
+        align-items: flex-start;
+        display: flex;
+        font-size: 1.3em;
+        font-weight: 200;
+        letter-spacing: 1px;
+        padding: 0em 0em;
+        text-decoration: none;
+        text-shadow: 0em 0em 0em rgba(0,0,0,.1);
+        transition: all linear 0.1s;
+    }
+
+    .logonav li {
+        flex-basis: 100%;
+    }*/
+
+    /* Flex Container*/
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0em;
+    }
+
+    /* Flex Item */
+    .wrapper > * {
+        order: 100;
+        margin: 0 auto;
+        padding: 0em;
+    }
+
+    .logonav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100vw;
+        order: 0;
+        margin: 0 auto;
+        padding: .5em 0em 1em 0em;
+        background-color: #070050;
+    }  
+    
+    /* next three updated */
+    .logonav > div > ul {
+        display: flex;
+        flex-direction: column;
+        max-width: 100vw;
+        padding-top: .8em;
+    }
+
+    .logonav > div > ul > li {
+        display: flex;
+        height: 1.5em;
+    }
+
+    .logonav > div > ul > li > a {
+        flex: 1;
+    }
+    
+/*    .logonav ul {
+        display: flex;
+        flex-direction: column;
+        max-width: 100vw;
+        padding-top: .8em;
+    }
+
+    .logonav ul li {
+        display: flex;
+        height: 1.5em;
+    }
+
+    .logonav ul li a {
+        flex: 1;
+    }
+
+    .logonav > ul > li:hover a + div {
+        display: none;
+    }
+    
+    .logonav span:after {    DropDown Arrow 
+        display: none;
+    }
+    
+    hide drop down options until hover
+    .logonav ul ul {
+        display: none;
+    }
+    
+    .logonav ul ul li {
+        display: none;  
+    }
+    
+    .logonav ul ul li a {
+       display: none;
+    }*/
+    
+    .logodiv {
+        position: relative;
+        height: 4em;
+    }
+
+    .logodiv img {
+        width: 100vw;
+        height: auto;
+    }
+    
+    /* updated */
+    .logonav > div > ul > li a + div {
+        border-radius: 0em 0em 0em 0em;
+        box-shadow: 0em 0em 0em rgba(0,0,0,.05);
+    }
+
+/*    .logonav > ul > li a + div {
+        border-radius: 0em 0em 0em 0em;
+        box-shadow: 0em 0em 0em rgba(0,0,0,.05);
+    }*/
+
+    h2 {
+        padding: 1em;
+    }
+
+    h3 {
+        padding-top: 1em;
+    }
+    
+    #f2lcontent {
+        display: flex;
+        flex-direction: column;
+        padding: 0em 1em 0em 1em;
+    }
+    
+    .f2l1 {
+        flex: 2;
+        order: 0;
+    }
+    
+    .f2l1cover {
+        flex: 2;
+        order: 0;
+    }
+
+    .f2l1cover img {
+        padding: 0em 1em 1em 1em;
+        max-width: 95vw;
+        height: auto;
+    }
+    
+    #contactcontent * {
+        padding-right: 1em;
+        flex: 3;
+        order: 3;
+    }
+    
+    .f2l2 {
+        order: 3;
+        padding-top: 2em;
+    }
+
+    .f2lsidebar {
+        flex: 1;
+        order: 1;
+    }
+    
+    /* contact sidebar for home page */
+    .f2lcontactsidebarcontent {
+        background: white;
+        padding: 1em;
+        margin: 1em;
+        flex: 1;
+        order: 2;
+        width: 90%;
+    }
+    
+    /* contact sidebar for contact page */
+    .f2lsidebarcontact {
+        background: white;
+        padding: 1em;
+        margin: 1em;
+        flex: 1;
+        width: 85%;
+    }
+
+    .f2lsidebar * {
+        padding: 0em 1em 1em 1em;
+    }
+
+    .f2limages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+    }
+
+    .f2lcolumn img {
+        padding: 1em 1em 0em 1em;
+        max-width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        height: 5em;
+        margin: 0 auto;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    footer div {
+        align-items: center;
+        padding: 0.2em;
+    }
+
+}
+
+
