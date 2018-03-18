@@ -3,18 +3,19 @@ const express = require('express');
 const app = express();
 
 var pg = require('pg');
+const connectionString = process.env.DATABASE_URL || "postgres://testuser:testuser@localhost:5432/Jenaca";
 
 app.get('/db', function (request, response) {
-  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    // client.query('SELECT * FROM node.test_table', function(err, result) {
-      client.query('SELECT * FROM node.person', function(err, result) {
+
+  pg.connect(connectionString, function(err, client, done) {
+     client.query('SELECT * FROM node.test_table', function(err, result) {
       done();
       if (err)
        { console.error(err); response.send("Error " + err); }
       else
        { response.render('pages/db', {results: result.rows} ); }
     });
-  });
+ });
 });
 
 app.set('port', (process.env.PORT || 5000));
@@ -48,6 +49,9 @@ app.set('view engine', 'ejs');
 
 // And here's our home page
 app.get('/', (req, res) => res.render('home'));
+
+// Postal home page
+app.get('/postal', (req, res) => res.render('postal'));
 
 // validation with cool ancii faces
 app.get('/cool', function(request, response) {
