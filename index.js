@@ -17,17 +17,35 @@ var client = new Twitter({
 });
  
 var tweetParams = {screen_name: 'freedom2learnbk'};
+var timeline = "";
 client.get('statuses/user_timeline', tweetParams, function(error, tweets, response) {
   if (error) {
     throw error;
   }
 
-  var timeline = tweets;
+  //var timeline = tweets;
 
-  //console.log(timeline);
+  timeline = tweets;
 
-  //console.log(tweets);
+  console.log(timeline.length);
+  //getTweetData(timeline);
+ 
 });
+
+
+// get tweets
+app.get('/home/:timeline', (req, res) => {
+  console.log(req.params);
+  // let result = (+req.params.timeline);
+  // console.log(result);
+  res.json({
+    timeline: timeline,
+    // timeline: +req.params.timeline,
+   // timeline: "AAAAAAAAAAAAAAAAAAAA",
+   // result: result,
+  });
+});
+
 
 client.get('followers/ids', tweetParams, function(error, follower_ids, response) {
   if (error) {

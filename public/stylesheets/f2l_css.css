@@ -177,6 +177,7 @@ nav ul ul li a {
     background: white;
     padding: 1.5em;
     margin-right: 2em;
+    max-width: 20vw;
 }
 
 /* contact sidebar for contact page */
