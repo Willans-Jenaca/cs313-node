@@ -37,47 +37,12 @@ $('#op1').on('keydown keyup', function(e){
 //   $('#tweetAjax').click(getTweetData);
 // });
 
-//  async function getTweetData() {
-  
-//   let data = await fetch(`/home/:timeline`, {
-//     method: 'GET',
-//   });
-//   let result = await data.json();
-//   $('#tweetResult').text(
-//     `The timeline is: ${result.timeline.length 
-//     }.`,
-//   );
-// }
+// window.onload = getTweetData() {
+// };
 
-
-// $(document).ready(() => {
-//   $('#tweetAjax').click(getTweetData);
-// });
-
-//  async function getTweetData() {
-  
-//   let data = await fetch(`/home/:timeline`, {
-//     method: 'GET',
-//   });
-//   let result = await data.json();
-
-
-//   var tweetData = [];
-//   // loop through followers
-//     result.timeline.forEach(function(text) {
-//         tweetData.push(text);
-//     });
-
-//   $('#tweetResult').text(
-
-//     `The timeline is: ${tweetData[0].text 
-//     }.`,
-//   );
-// }
-
-$(document).ready(() => {
-  $('#tweetAjax').click(getTweetData);
-});
+$(document).ready(function () {
+       getTweetData();
+    });
 
  async function getTweetData() {
   
@@ -93,33 +58,17 @@ $(document).ready(() => {
         tweetData.push(text);
     });
 
-  $('#tweetResult').text(
+    var resultList = $("#tweetResult");
+    resultList.empty();
 
-    `${tweetData[0].text 
-    }`,
-  );
+    for (var i = 0; i < tweetData.length; i++) {
+      var tweetText = tweetData[i].text;
+      resultList.append("<p>" + tweetText + "</p></br>");
+    }
 }
 
 
-// function getTweets(timeline)
-//   {        
-//         // var parseTweet = JSON.parse(this);
-//         var parseTweet = JSON.parse(timeline);
-//        //var parseTweet = timeline;
-//         console.log(parseTweet);
-//         //var table = document.getElementById("tweetTable");
-//         var table = document.getElementById("tweetTable");
-//         var j = 1;
 
-//         for (var i = 0; i < parseTweet.tweets.length; i++)
-//         {
-//             var row = table.insertRow(j);
-//             var cell1 = row.insertCell(0);
-//             var cell2 = row.insertCell(1);
-//             cell1.innerHTML = parseTweet.tweets[i].screen_name;
-//             cell2.innerHTML = parseTweet.tweets[i].text;
-           
-//             j++;
-//         }
-//   }
+
+
 

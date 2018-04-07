@@ -16,33 +16,24 @@ var client = new Twitter({
   access_token_secret: 'ohFSDsvskwuV7uWK3sIFOYwl5lNwig2LaQ8xyoihMK2d5'
 });
  
-var tweetParams = {screen_name: 'freedom2learnbk'};
+// var tweetParams = {screen_name: 'freedom2learnbk'};
+var tweetParams = {screen_name: 'jenaca_willans'};
 var timeline = "";
 client.get('statuses/user_timeline', tweetParams, function(error, tweets, response) {
   if (error) {
     throw error;
   }
 
-  //var timeline = tweets;
-
   timeline = tweets;
 
-  console.log(timeline.length);
-  //getTweetData(timeline);
- 
+  console.log(timeline.length); 
 });
-
 
 // get tweets
 app.get('/home/:timeline', (req, res) => {
-  console.log(req.params);
-  // let result = (+req.params.timeline);
-  // console.log(result);
+ // console.log(req.params);
   res.json({
     timeline: timeline,
-    // timeline: +req.params.timeline,
-   // timeline: "AAAAAAAAAAAAAAAAAAAA",
-   // result: result,
   });
 });
 
