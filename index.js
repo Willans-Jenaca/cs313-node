@@ -16,8 +16,8 @@ var client = new Twitter({
   access_token_secret: 'ohFSDsvskwuV7uWK3sIFOYwl5lNwig2LaQ8xyoihMK2d5'
 });
  
-// var tweetParams = {screen_name: 'freedom2learnbk'};
-var tweetParams = {screen_name: 'jenaca_willans'};
+var tweetParams = {screen_name: 'freedom2learnbk'};
+//var tweetParams = {screen_name: 'jenaca_willans'};
 var timeline = "";
 client.get('statuses/user_timeline', tweetParams, function(error, tweets, response) {
   if (error) {
