@@ -30,8 +30,7 @@ client.get('statuses/user_timeline', tweetParams, function(error, tweets, respon
 });
 
 // get tweets
-app.get('/home/:timeline', (req, res) => {
- // console.log(req.params);
+  app.get('/home', (req, res) => {
   res.json({
     timeline: timeline,
   });

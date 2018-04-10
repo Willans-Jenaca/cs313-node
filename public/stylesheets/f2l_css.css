@@ -12,7 +12,8 @@ body {
     margin: 0 auto;
     padding: 0;
     font-family: VAG Rounded, sans-serif;
-    background-color: #070050;
+    /*background-color: #070050;*/
+    background: rgba(191, 210, 228, 1); 
 }
 
 .wrapper {

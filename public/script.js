@@ -33,20 +33,17 @@ $('#op1').on('keydown keyup', function(e){
 });
 
 
-// $(document).ready(() => {
-//   $('#tweetAjax').click(getTweetData);
-// });
-
-// window.onload = getTweetData() {
-// };
-
 $(document).ready(function () {
        getTweetData();
     });
 
+$(document).ready(() => {
+  $('#tweetAjax').click(getTweetData);
+});
+
  async function getTweetData() {
-  
-  let data = await fetch(`/home/:timeline`, {
+   
+    let data = await fetch(`/home`, {
     method: 'GET',
   });
   let result = await data.json();
